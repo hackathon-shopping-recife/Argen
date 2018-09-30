@@ -8,5 +8,5 @@
  - Paula Pithon (Programadora, Pitch Girl) 
  - Paula Soares (Designer, Ux Writer)
  - Ramon Wanderley (Negócios, Programador)
- - Otacilio Maia (Negócios, DevOps)
+ - Otacilio Maia (Programador, DevOps)
  - Michael Barney (Programador, Designer)
