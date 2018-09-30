@@ -1,4 +1,4 @@
-import { Bar, Pie, mixins} from 'vue-chartjs'
+import { Bar, Pie, mixins } from "vue-chartjs";
 
 // export default {
 //   extends: Pie,
@@ -13,16 +13,16 @@ import { Bar, Pie, mixins} from 'vue-chartjs'
 //   mounted () {
 //     // Overwriting base render method with actual data.
 //     this.renderChart({
-     
+
 //       labels: ['masculino','feminino','outros','não respondido'],
-      
+
 //       datasets: [
 //         {
 //           label: 'GitHub Commits',
 //           backgroundColor: ['#f87979', '#812338','#612772', '#fff'],
 //           data: [this.props.chartData.masculino    , this.props.chartData.feminino, this.props.chartData.outros, this.props.chartData.naoRespondido]
 //         }
-       
+
 //       ]
 //     })
 //   }
@@ -33,18 +33,21 @@ const { reactiveProp } = mixins;
 export default {
   extends: Pie,
   mixins: [reactiveProp],
-  props: {data: Array},
-  mounted () {
-      console.log("achei");
-    this.renderChart({
-        labels: ['Masculino', 'Feminino', 'Outros','Não Respondido'],
+  props: { data: Array },
+  mounted() {
+    console.log("achei");
+    this.renderChart(
+      {
+        labels: ["Masculino", "Feminino", "Outros", "Não Respondido"],
         datasets: [
           {
             // label: 'GitHub Commits',
-            backgroundColor: ['#97191D','#E5321D','#579C86', '#F07D35'],
+            backgroundColor: ["#97191D", "#E5321D", "#579C86", "#F07D35"],
             data: this.data
           }
         ]
-      }, this.options)
+      },
+      this.options
+    );
   }
-}
+};
